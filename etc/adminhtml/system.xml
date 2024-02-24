@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="vivek" translate="label" sortOrder="999">
+			<label>Vivek</label>
+		</tab>
+		<section id="shop_by_brand" sortOrder="10" showInWebsite="1" showInStore="0" showInDefault="1" translate="label">
+			<label>Shop By Brand</label>
+			<tab>vivek</tab>
+			<resource>Vivek_ShopByBrand::config_vivek_shopbybrand</resource>
+			<group id="general" sortOrder="10" showInWebsite="1" showInStore="0" showInDefault="1" translate="label">
+				<label>General</label>
+				<field id="attribute" type="text" sortOrder="10" showInWebsite="1" showInStore="0" showInDefault="1" translate="label">
+					<label>attribute</label>
+					<comment/>
+				</field>
+				<field id="url_key" type="text" sortOrder="10" showInWebsite="1" showInStore="0" showInDefault="1" translate="label">
+					<label>Brand URL Key</label>
+					<comment>URL key used to listing brand products</comment>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

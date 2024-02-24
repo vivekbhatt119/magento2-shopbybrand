@@ -1,0 +1,22 @@
+{
+    "name": "vivek/module-shopbybrand",
+    "description": "shop by brand module enables you to listing products by brand",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Vivek Bhatt",
+            "email": "vivekbhatt119@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vivek\\ShopByBrand\\": ""
+        }
+    }
+}
