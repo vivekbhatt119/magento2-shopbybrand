@@ -3,7 +3,7 @@
 	<default>
 		<shop_by_brand>
 			<general>
-				<attribute/>
+                <attribute>brand</attribute>
 				<url_key>brand</url_key>
 			</general>
 		</shop_by_brand>

@@ -2,7 +2,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 	<body>
 		<referenceContainer name="content">
-			<block name="index.index" class="Vivek\ShopByBrand\Block\Index\Index" template="Vivek_ShopByBrand::index/index.phtml"/>
+            <block name="index.index" template="Vivek_ShopByBrand::index/index.phtml">
+                <arguments>
+                    <argument name="attribute_helper" xsi:type="object">Vivek\ShopByBrand\ViewModel\AttributeHelper</argument>
+                </arguments>
+            </block>
 		</referenceContainer>
 	</body>
 </page>

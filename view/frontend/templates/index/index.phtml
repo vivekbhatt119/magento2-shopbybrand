@@ -1,1 +1,9 @@
-Hello index/index.phtml
+<?php
+/** @var \Vivek\ShopByBrand\ViewModel\AttributeHelper $attributeHelper */
+$attributeHelper = $block->getAttributeHelper();
+?>
+<ul>
+<?php foreach ($attributeHelper->getAttributeOptions() as $option): ?>
+    <li><a href="<?= $block->getUrl("brand/view", ["brand_id" => $option['value']]) ?>"><?= $option['label'] ?></a></li>
+<?php endforeach; ?>
+</ul>

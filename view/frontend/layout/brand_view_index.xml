@@ -1,8 +1,16 @@
 <?xml version="1.0" ?>
-<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-	<body>
-		<referenceContainer name="content">
-			<block name="view.index" class="Vivek\ShopByBrand\Block\View\Index" template="Vivek_ShopByBrand::view/index.phtml"/>
-		</referenceContainer>
-	</body>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="catalog_category_view"/>
+    <update handle="catalog_category_view_type_layered"/>
+    <head>
+        <title>Brand List</title>
+    </head>
+    <body>
+        <referenceBlock name="catalog_category_event" remove="true"/>
+        <referenceBlock name="category.description" remove="true"/>
+        <referenceBlock name="category.image" remove="true"/>
+        <referenceBlock name="category.cms" remove="true"/>
+        <referenceBlock name="category.products.list" class="Vivek\ShopByBrand\Block\ListProduct"/>
+        <referenceBlock name="catalog.leftnav" class="Magento\LayeredNavigation\Block\Navigation\Brand"/>
+    </body>
 </page>

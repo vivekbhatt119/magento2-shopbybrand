@@ -1,16 +1,14 @@
 <?php
-declare(strict_types=1);
 
 namespace Vivek\ShopByBrand\Controller;
 
-use Magento\Framework\App\ActionFactory;
 use Magento\Framework\App\Action\Forward;
+use Magento\Framework\App\ActionFactory;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\RouterInterface;
 
 class Router implements RouterInterface
 {
-
     protected $transportBuilder;
     protected $actionFactory;
 
@@ -30,12 +28,12 @@ class Router implements RouterInterface
     public function match(RequestInterface $request)
     {
         $result = null;
-        
-        if ($request->getModuleName() != 'example' && $this->validateRoute($request)) {
-            $request->setModuleName('example')
-                ->setControllerName('index')
+
+        if ($request->getModuleName() != 'brand' && $this->validateRoute($request)) {
+            $request->setModuleName('brand')
+                ->setControllerName('view')
                 ->setActionName('index')
-                ->setParam('param', 3);
+                ->setParam('brand_id', 3);
             $result = $this->actionFactory->create(Forward::class);
         }
         return $result;
@@ -51,4 +49,3 @@ class Router implements RouterInterface
         return strpos($identifier, 'brand_router') !== false;
     }
 }
-
